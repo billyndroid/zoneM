@@ -52,10 +52,10 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(14, 14, 14, 0.98)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = 'rgba(14, 14, 14, 0.95)';
         navbar.style.boxShadow = 'none';
     }
 });
@@ -324,8 +324,8 @@ backToTopButton.style.cssText = `
     right: 30px;
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
-    color: white;
+    background: #6FA6A6;
+    color: #0E0E0E;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -333,7 +333,7 @@ backToTopButton.style.cssText = `
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(111, 166, 166, 0.3);
 `;
 
 document.body.appendChild(backToTopButton);

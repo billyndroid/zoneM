@@ -1,0 +1,52 @@
+{
+  "name": "stephen-smith-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive web developer portfolio showcasing skills and services",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Building portfolio...' && echo 'Portfolio ready for deployment!'",
+    "deploy": "echo 'Deploying to production...'",
+    "lint": "echo 'Linting code...'",
+    "test": "echo 'Running tests...'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "frontend",
+    "backend",
+    "fullstack",
+    "javascript",
+    "html",
+    "css",
+    "responsive",
+    "modern"
+  ],
+  "author": {
+    "name": "Stephen Smith",
+    "email": "stephen@example.com",
+    "url": "https://app.pluralsight.com/profile/StephenSmith"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billyndroid/zoneM.git"
+  },
+  "bugs": {
+    "url": "https://github.com/billyndroid/zoneM/issues"
+  },
+  "homepage": "https://github.com/billyndroid/zoneM#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
