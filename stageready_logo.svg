@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#faf8f3"/>
+  
+  <!-- Minimalist guitar body outline (25% smaller) -->
+  <ellipse cx="200" cy="145" rx="37.5" ry="41.25" fill="none" stroke="#b8860b" stroke-width="2.5"/>
+  
+  <!-- Guitar neck - clean line -->
+  <rect x="195" y="80" width="10" height="86" fill="#b8860b" rx="2"/>
+  
+  <!-- Fret markers - minimal dots -->
+  <circle cx="200" cy="95" r="2.5" fill="#2c1810"/>
+  <circle cx="200" cy="110" r="2.5" fill="#2c1810"/>
+  <circle cx="200" cy="125" r="2.5" fill="#2c1810"/>
+  
+  <!-- Strings crossing body -->
+  <line x1="197" y1="80" x2="197" y2="186" stroke="#8b4513" stroke-width="0.8" opacity="0.6"/>
+  <line x1="203" y1="80" x2="203" y2="186" stroke="#8b4513" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Headstock - simple geometric -->
+  <rect x="192" y="65" width="16" height="18" fill="#b8860b" rx="2"/>
+  
+  <!-- Sound hole -->
+  <circle cx="200" cy="145" r="11.25" fill="#2c1810" stroke="#b8860b" stroke-width="1.5"/>
+  
+  <!-- Text: STAGE -->
+  <text x="200" y="240" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" fill="#b8860b" text-anchor="middle" letter-spacing="8">STAGE</text>
+  
+  <!-- Text: READY -->
+  <text x="200" y="270" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="300" fill="#2c1810" text-anchor="middle" letter-spacing="8">READY</text>
+  
+  <!-- Text: Guitar Studio -->
+  <text x="200" y="295" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#8b4513" text-anchor="middle" letter-spacing="4">GUITAR STUDIO</text>
+  
+  <!-- Accent line -->
+  <line x1="120" y1="280" x2="280" y2="280" stroke="#cd853f" stroke-width="1" opacity="0.5"/>
+</svg>
