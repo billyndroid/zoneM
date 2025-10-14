@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Smith - Web Developer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.svg" alt="Stephen Smith" class="logo">
+                <span class="logo-text">Stephen Smith</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Stephen Smith</h1>
+                <h2 class="hero-subtitle">Full-Stack Web Developer</h2>
+                <p class="hero-description">
+                    Creating modern, responsive, and user-friendly web applications with cutting-edge technologies.
+                    Passionate about clean code, innovative solutions, and delivering exceptional digital experiences.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/yourusername" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://app.pluralsight.com/profile/StephenSmith" class="social-link" target="_blank">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="mailto:stephen@example.com" class="social-link" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="about-photo.jpg" alt="Stephen Smith - Web Developer" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate web developer with a focus on creating exceptional digital experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm Stephen Smith</h3>
+                    <p>
+                        I'm a passionate full-stack web developer with expertise in modern web technologies. 
+                        I love creating clean, efficient, and scalable web applications that solve real-world problems.
+                    </p>
+                    <p>
+                        With a strong foundation in both front-end and back-end development, I bring ideas to life 
+                        through code. I'm constantly learning and staying up-to-date with the latest technologies 
+                        and best practices in web development.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3>What I Do</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Frontend Development</h4>
+                                <p>Creating responsive and interactive user interfaces with React, Vue.js, and modern CSS</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <div>
+                                <h4>Backend Development</h4>
+                                <p>Building robust server-side applications with Node.js, Python, and various databases</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>
+                                <h4>Mobile-First Design</h4>
+                                <p>Ensuring optimal experience across all devices with responsive design principles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">HTML5</span>
+                        <span class="tech-item">CSS3</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Vue.js</span>
+                        <span class="tech-item">Angular</span>
+                        <span class="tech-item">Sass/SCSS</span>
+                        <span class="tech-item">Tailwind CSS</span>
+                        <span class="tech-item">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Express.js</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Django</span>
+                        <span class="tech-item">Flask</span>
+                        <span class="tech-item">PHP</span>
+                        <span class="tech-item">Laravel</span>
+                        <span class="tech-item">C#</span>
+                        <span class="tech-item">.NET</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">MySQL</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">MongoDB</span>
+                        <span class="tech-item">SQLite</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">Git</span>
+                        <span class="tech-item">GitHub</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">Heroku</span>
+                        <span class="tech-item">Vercel</span>
+                        <span class="tech-item">Webpack</span>
+                        <span class="tech-item">Vite</span>
+                        <span class="tech-item">Jest</span>
+                        <span class="tech-item">Cypress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">How I can help bring your ideas to life</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="services/service-1.jpg" alt="Web Development" class="service-image">
+                    <div class="service-content">
+                        <i class="fas fa-laptop-code service-icon"></i>
+                        <h3>Web Development</h3>
+                        <p>Custom web applications built with modern technologies, optimized for performance and user experience.</p>
+                        <ul class="service-features">
+                            <li>Responsive Design</li>
+                            <li>Performance Optimization</li>
+                            <li>SEO Implementation</li>
+                            <li>Cross-browser Compatibility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="services/service-2.jpg" alt="Frontend Development" class="service-image">
+                    <div class="service-content">
+                        <i class="fas fa-paint-brush service-icon"></i>
+                        <h3>Frontend Development</h3>
+                        <p>Beautiful and interactive user interfaces that engage users and provide seamless experiences.</p>
+                        <ul class="service-features">
+                            <li>React/Vue.js Development</li>
+                            <li>Progressive Web Apps</li>
+                            <li>UI/UX Implementation</li>
+                            <li>Animation & Interactions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="services/service-3.jpg" alt="Backend Development" class="service-image">
+                    <div class="service-content">
+                        <i class="fas fa-database service-icon"></i>
+                        <h3>Backend Development</h3>
+                        <p>Robust server-side solutions with secure APIs, databases, and scalable architecture.</p>
+                        <ul class="service-features">
+                            <li>REST API Development</li>
+                            <li>Database Design</li>
+                            <li>Authentication Systems</li>
+                            <li>Cloud Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Recent projects and work samples</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="fullstack">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=E-Commerce+Platform" alt="E-Commerce Platform">
+                        <div class="portfolio-overlay">
+                            <h3>E-Commerce Platform</h3>
+                            <p>Full-stack e-commerce solution with React and Node.js</p>
+                            <div class="portfolio-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="frontend">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Weather+App" alt="Weather App">
+                        <div class="portfolio-overlay">
+                            <h3>Weather Dashboard</h3>
+                            <p>React-based weather application with beautiful UI</p>
+                            <div class="portfolio-tech">
+                                <span>React</span>
+                                <span>CSS3</span>
+                                <span>API Integration</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Task+Manager" alt="Task Manager">
+                        <div class="portfolio-overlay">
+                            <h3>Task Management App</h3>
+                            <p>Collaborative task management with real-time updates</p>
+                            <div class="portfolio-tech">
+                                <span>Vue.js</span>
+                                <span>Express.js</span>
+                                <span>Socket.io</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="fullstack">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Blog+Platform" alt="Blog Platform">
+                        <div class="portfolio-overlay">
+                            <h3>Blog Platform</h3>
+                            <p>Content management system with admin dashboard</p>
+                            <div class="portfolio-tech">
+                                <span>Angular</span>
+                                <span>Django</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What clients say about working with me</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"Stephen delivered an exceptional web application that exceeded our expectations. His attention to detail and technical expertise are outstanding. The project was completed on time and within budget."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/80x80/667eea/ffffff?text=JD" alt="John Doe" class="author-image">
+                            <div class="author-info">
+                                <h4>John Doe</h4>
+                                <span>CEO, Tech Solutions Inc.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"Working with Stephen was a fantastic experience. He understood our requirements perfectly and delivered a beautiful, functional website. His communication throughout the project was excellent."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/80x80/764ba2/ffffff?text=SM" alt="Sarah Miller" class="author-image">
+                            <div class="author-info">
+                                <h4>Sarah Miller</h4>
+                                <span>Marketing Director, Creative Agency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"Stephen's technical skills and problem-solving abilities are impressive. He delivered a complex web application with clean code and excellent performance. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/80x80/f093fb/ffffff?text=MJ" alt="Mike Johnson" class="author-image">
+                            <div class="author-info">
+                                <h4>Mike Johnson</h4>
+                                <span>CTO, StartupXYZ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to start your next project? Let's work together!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:stephen@example.com">stephen@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Your City, Country</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/yourusername" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://app.pluralsight.com/profile/StephenSmith" class="social-link" target="_blank">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.svg" alt="Stephen Smith" class="logo">
+                        <span class="logo-text">Stephen Smith</span>
+                    </div>
+                    <p>Full-stack web developer passionate about creating exceptional digital experiences.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/yourusername" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://app.pluralsight.com/profile/StephenSmith" class="social-link" target="_blank">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Frontend Development</a></li>
+                        <li><a href="#services">Backend Development</a></li>
+                        <li><a href="#services">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> stephen@example.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Your City, Country</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stephen Smith. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
