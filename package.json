@@ -37,7 +37,8 @@
   },
   "homepage": "https://github.com/billyndroid/zoneM#readme",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "puppeteer": "^24.25.0"
   },
   "browserslist": [
     "> 1%",

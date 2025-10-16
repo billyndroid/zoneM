@@ -13,8 +13,13 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for in-page navigation links only
+// Only attach the handler when the href points to an existing element on the page.
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    const href = anchor.getAttribute('href');
+    // Skip bare '#' links or anchors that don't match any element on the page
+    if (!href || href === '#' || !document.querySelector(href)) return;
+
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -369,3 +374,219 @@ window.addEventListener('load', () => {
 });
 
 console.log('Portfolio website initialized successfully!');
+
+// Portfolio Modal Functionality
+const portfolioModal = document.getElementById('portfolioModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalImage = document.getElementById('modalImage');
+const modalDescription = document.getElementById('modalDescription');
+const modalTechStack = document.getElementById('modalTechStack');
+const modalFeatures = document.getElementById('modalFeatures');
+const modalLiveLink = document.getElementById('modalLiveLink');
+const modalGithubLink = document.getElementById('modalGithubLink');
+const closeModal = document.querySelector('.close');
+
+// Project data
+const projectData = {
+    'make-it-rain': {
+        title: 'Make It Rain - Weather/Market Analyser',
+        image: 'https://via.placeholder.com/600x400/6FA6A6/ECECEC?text=Make+It+Rain+Screenshot',
+        description: 'A comprehensive weather and market analysis tool that provides real-time data visualization. The application combines weather forecasting with market trend analysis to help users make informed decisions. Features interactive charts, responsive design, and real-time data updates from multiple APIs.',
+        technologies: ['JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'Weather API', 'Market API', 'Responsive Design'],
+        features: [
+            'Real-time weather data visualization',
+            'Market trend analysis and charts',
+            'Interactive dashboard with multiple data sources',
+            'Responsive design for all devices',
+            'API integration for live data feeds',
+            'Custom charting and data visualization',
+            'User-friendly interface with smooth animations'
+        ],
+        liveLink: 'https://billyndroid.github.io/make-it-rain/',
+        githubLink: 'https://github.com/billyndroid/make-it-rain'
+    },
+    'ecommerce': {
+        title: 'E-Commerce Platform',
+        image: 'https://via.placeholder.com/600x400/BFAE97/0E0E0E?text=E-Commerce+Platform',
+        description: 'A full-stack e-commerce solution built with modern technologies. Features include user authentication, product catalog, shopping cart, payment processing, and admin dashboard. Designed with scalability and security in mind.',
+        technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Stripe API', 'JWT', 'Redux'],
+        features: [
+            'User authentication and authorization',
+            'Product catalog with search and filters',
+            'Shopping cart and checkout process',
+            'Payment integration with Stripe',
+            'Admin dashboard for inventory management',
+            'Order tracking and history',
+            'Responsive design for mobile commerce'
+        ],
+        liveLink: '#',
+        githubLink: '#'
+    },
+    'weather-dashboard': {
+        title: 'Weather Dashboard',
+        image: 'https://via.placeholder.com/600x400/6FA6A6/ECECEC?text=Weather+Dashboard',
+        description: 'A beautiful and intuitive weather application built with React. Provides detailed weather information including current conditions, hourly forecasts, and 7-day outlook. Features location-based weather detection and favorite cities management.',
+        technologies: ['React', 'CSS3', 'OpenWeather API', 'Geolocation API', 'Local Storage'],
+        features: [
+            'Current weather conditions display',
+            'Hourly and daily weather forecasts',
+            'Location-based weather detection',
+            'Search weather by city name',
+            'Favorite cities management',
+            'Beautiful animated weather icons',
+            'Responsive mobile-first design'
+        ],
+        liveLink: '#',
+        githubLink: '#'
+    },
+    'task-manager': {
+        title: 'Task Management App',
+        image: 'https://via.placeholder.com/600x400/BFAE97/0E0E0E?text=Task+Manager',
+        description: 'A collaborative task management application with real-time updates. Built with Vue.js frontend and Node.js backend, featuring Socket.io for real-time collaboration. Includes project management, team collaboration, and progress tracking.',
+        technologies: ['Vue.js', 'Express.js', 'Socket.io', 'MongoDB', 'Node.js', 'JWT'],
+        features: [
+            'Real-time collaborative task management',
+            'Project organization and categorization',
+            'Team member assignment and notifications',
+            'Progress tracking with visual indicators',
+            'Deadline management and reminders',
+            'File attachments and comments',
+            'Mobile-responsive interface'
+        ],
+        liveLink: '#',
+        githubLink: '#'
+    },
+    'blog-platform': {
+        title: 'Blog Platform & CMS',
+        image: 'https://via.placeholder.com/600x400/6FA6A6/ECECEC?text=Blog+Platform',
+        description: 'A comprehensive content management system with blog functionality. Features a rich text editor, media management, user roles, and SEO optimization. Built with Angular frontend and Django backend for robust performance.',
+        technologies: ['Angular', 'Django', 'PostgreSQL', 'Redis', 'Nginx', 'AWS S3'],
+        features: [
+            'Rich text editor with media embedding',
+            'User roles and permissions system',
+            'SEO optimization and meta tag management',
+            'Comment system with moderation',
+            'Media library and file management',
+            'Analytics dashboard for content performance',
+            'Multi-language support and localization'
+        ],
+        liveLink: '#',
+        githubLink: '#'
+    }
+};
+
+// Event listeners for modal buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const modalButtons = document.querySelectorAll('.portfolio-modal-btn');
+    
+    modalButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectId = this.getAttribute('data-project');
+            openModal(projectId);
+        });
+    });
+
+    // Ensure overlay external and GitHub links point to the project URLs from projectData
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+        const modalBtn = item.querySelector('.portfolio-modal-btn');
+        if (!modalBtn) return;
+        const projectId = modalBtn.getAttribute('data-project');
+        const project = projectData[projectId];
+        if (!project) return;
+
+        const anchors = item.querySelectorAll('.portfolio-links a');
+        anchors.forEach(a => {
+            const icon = a.querySelector('i');
+            if (!icon) return;
+            const classList = icon.className || '';
+            if (classList.includes('fa-external-link-alt')) {
+                a.href = project.liveLink || '#';
+            }
+            if (classList.includes('fa-github')) {
+                a.href = project.githubLink || '#';
+            }
+
+            // Open external links in a new tab safely
+            if (a.href && a.href !== '#' && (a.href.startsWith('http') || a.target === '_blank')) {
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+            }
+        });
+    });
+
+    // Close modal events
+    closeModal.addEventListener('click', function() {
+        portfolioModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        if (e.target === portfolioModal) {
+            portfolioModal.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && portfolioModal.style.display === 'block') {
+            portfolioModal.style.display = 'none';
+        }
+    });
+});
+
+function openModal(projectId) {
+    const project = projectData[projectId];
+    if (!project) return;
+
+    // Populate modal content
+    modalTitle.textContent = project.title;
+    modalImage.src = project.image;
+    modalImage.alt = project.title;
+    modalDescription.textContent = project.description;
+
+    // Populate tech stack
+    modalTechStack.innerHTML = '';
+    project.technologies.forEach(tech => {
+        const techSpan = document.createElement('span');
+        techSpan.className = 'tech-item';
+        techSpan.textContent = tech;
+        modalTechStack.appendChild(techSpan);
+    });
+
+    // Populate features
+    modalFeatures.innerHTML = '';
+    project.features.forEach(feature => {
+        const featureLi = document.createElement('li');
+        featureLi.textContent = feature;
+        modalFeatures.appendChild(featureLi);
+    });
+
+    // Set links
+    modalLiveLink.href = project.liveLink;
+    modalGithubLink.href = project.githubLink;
+
+    // Show modal
+    portfolioModal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Hide body overflow when modal closes
+function closePortfolioModal() {
+    portfolioModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Update close functionality
+closeModal.addEventListener('click', closePortfolioModal);
+window.addEventListener('click', function(e) {
+    if (e.target === portfolioModal) {
+        closePortfolioModal();
+    }
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && portfolioModal.style.display === 'block') {
+        closePortfolioModal();
+    }
+});
