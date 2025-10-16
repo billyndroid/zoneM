@@ -390,7 +390,7 @@ const closeModal = document.querySelector('.close');
 const projectData = {
     'make-it-rain': {
         title: 'Make It Rain - Weather/Market Analyser',
-        image: 'https://via.placeholder.com/600x400/6FA6A6/ECECEC?text=Make+It+Rain+Screenshot',
+        image: 'Weather Market Analyzer.png',
         description: 'A comprehensive weather and market analysis tool that provides real-time data visualization. The application combines weather forecasting with market trend analysis to help users make informed decisions. Features interactive charts, responsive design, and real-time data updates from multiple APIs.',
         technologies: ['JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'Weather API', 'Market API', 'Responsive Design'],
         features: [
@@ -405,73 +405,141 @@ const projectData = {
         liveLink: 'https://billyndroid.github.io/make-it-rain/',
         githubLink: 'https://github.com/billyndroid/make-it-rain'
     },
-    'ecommerce': {
-        title: 'E-Commerce Platform',
-        image: 'https://via.placeholder.com/600x400/BFAE97/0E0E0E?text=E-Commerce+Platform',
-        description: 'A full-stack e-commerce solution built with modern technologies. Features include user authentication, product catalog, shopping cart, payment processing, and admin dashboard. Designed with scalability and security in mind.',
-        technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Stripe API', 'JWT', 'Redux'],
+    'ecommster': {
+        title: 'Ecommster - E-Commerce Platform',
+        image: 'https://picsum.photos/600/400?random=2',
+        description: 'A modern full-stack e-commerce platform built with Next.js and TypeScript. Features a complete shopping experience with product catalog, cart management, user authentication, and order processing. Built with scalability and performance in mind.',
+        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Fastify', 'React'],
         features: [
-            'User authentication and authorization',
-            'Product catalog with search and filters',
-            'Shopping cart and checkout process',
-            'Payment integration with Stripe',
-            'Admin dashboard for inventory management',
-            'Order tracking and history',
-            'Responsive design for mobile commerce'
+            'Modern TypeScript-based architecture',
+            'Responsive product catalog with filtering',
+            'Shopping cart and checkout functionality',
+            'User authentication and profile management',
+            'Order history and tracking',
+            'Admin dashboard for product management',
+            'High-performance backend with Fastify'
         ],
-        liveLink: '#',
-        githubLink: '#'
+        liveLink: 'https://billyndroid.github.io/ecommster/',
+        githubLink: 'https://github.com/billyndroid/ecommster'
     },
-    'weather-dashboard': {
-        title: 'Weather Dashboard',
-        image: 'https://via.placeholder.com/600x400/6FA6A6/ECECEC?text=Weather+Dashboard',
-        description: 'A beautiful and intuitive weather application built with React. Provides detailed weather information including current conditions, hourly forecasts, and 7-day outlook. Features location-based weather detection and favorite cities management.',
-        technologies: ['React', 'CSS3', 'OpenWeather API', 'Geolocation API', 'Local Storage'],
+    'cook-me-fresh': {
+        title: 'Cook Me Fresh - Cooking Service',
+        image: 'https://picsum.photos/600/400?random=3',
+        description: 'A professional website for a cooking service business offering personalized meal planning, cooking classes, and food demonstrations. Features service descriptions, testimonials, and contact functionality for small business needs.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Bootstrap'],
         features: [
-            'Current weather conditions display',
-            'Hourly and daily weather forecasts',
-            'Location-based weather detection',
-            'Search weather by city name',
-            'Favorite cities management',
-            'Beautiful animated weather icons',
-            'Responsive mobile-first design'
+            'Professional service presentation',
+            'Detailed service offerings and pricing',
+            'Client testimonials and reviews',
+            'Contact forms and booking system',
+            'Mobile-friendly responsive design',
+            'SEO-optimized content structure',
+            'Gallery showcasing cooking expertise'
         ],
-        liveLink: '#',
-        githubLink: '#'
+        liveLink: 'https://billyndroid.github.io/cook-me-fresh/',
+        githubLink: 'https://github.com/billyndroid/cook-me-fresh'
     },
-    'task-manager': {
-        title: 'Task Management App',
-        image: 'https://via.placeholder.com/600x400/BFAE97/0E0E0E?text=Task+Manager',
-        description: 'A collaborative task management application with real-time updates. Built with Vue.js frontend and Node.js backend, featuring Socket.io for real-time collaboration. Includes project management, team collaboration, and progress tracking.',
-        technologies: ['Vue.js', 'Express.js', 'Socket.io', 'MongoDB', 'Node.js', 'JWT'],
+    'premier-mobile': {
+        title: 'Premier Mobile Car Care',
+        image: 'https://picsum.photos/600/400?random=4',
+        description: 'A comprehensive website for a mobile car detailing service. Features detailed service matrix, pricing information, booking system, and customer testimonials. Designed to showcase professional car care services.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Responsive Design'],
         features: [
-            'Real-time collaborative task management',
-            'Project organization and categorization',
-            'Team member assignment and notifications',
-            'Progress tracking with visual indicators',
-            'Deadline management and reminders',
-            'File attachments and comments',
-            'Mobile-responsive interface'
+            'Detailed service matrix and pricing',
+            'Professional service descriptions',
+            'Customer testimonials and reviews',
+            'Mobile-optimized booking interface',
+            'Service comparison tables',
+            'Location-based service information',
+            'Professional branding and design'
         ],
-        liveLink: '#',
-        githubLink: '#'
+        liveLink: 'https://billyndroid.github.io/premier-mobile-car-care/',
+        githubLink: 'https://github.com/billyndroid/premier-mobile-car-care'
     },
-    'blog-platform': {
-        title: 'Blog Platform & CMS',
-        image: 'https://via.placeholder.com/600x400/6FA6A6/ECECEC?text=Blog+Platform',
-        description: 'A comprehensive content management system with blog functionality. Features a rich text editor, media management, user roles, and SEO optimization. Built with Angular frontend and Django backend for robust performance.',
-        technologies: ['Angular', 'Django', 'PostgreSQL', 'Redis', 'Nginx', 'AWS S3'],
+    'stageready': {
+        title: 'StageReady Guitar Studio',
+        image: 'https://picsum.photos/600/400?random=5',
+        description: 'A music education website for guitar lessons featuring lesson programs, instructor profiles, student testimonials, and booking functionality. Designed to attract students and showcase teaching expertise.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Modern UI'],
         features: [
-            'Rich text editor with media embedding',
-            'User roles and permissions system',
-            'SEO optimization and meta tag management',
-            'Comment system with moderation',
-            'Media library and file management',
-            'Analytics dashboard for content performance',
-            'Multi-language support and localization'
+            'Comprehensive lesson program descriptions',
+            'Instructor profile and credentials',
+            'Student testimonials and success stories',
+            'Flexible lesson scheduling system',
+            'Multiple lesson types and pricing',
+            'Professional music education branding',
+            'Mobile-friendly interface for students'
         ],
-        liveLink: '#',
-        githubLink: '#'
+        liveLink: 'https://billyndroid.github.io/lander2/',
+        githubLink: 'https://github.com/billyndroid/lander2'
+    },
+    'endeavour': {
+        title: 'Endeavour - Outdoor Adventures',
+        image: 'Landing Page Example - Parallax Effect full.png',
+        description: 'A beautiful website for an outdoor adventure company featuring hiking, climbing, and camping experiences. Showcases adventure packages, gear recommendations, and contact information with stunning photography.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Photography', 'Responsive Design'],
+        features: [
+            'Beautiful outdoor photography showcase',
+            'Adventure activity descriptions',
+            'Gear recommendations and guides',
+            'Contact and booking information',
+            'Responsive design for outdoor enthusiasts',
+            'Professional outdoor industry branding',
+            'Location and experience details'
+        ],
+        liveLink: 'https://billyndroid.github.io/landing-page-3/',
+        githubLink: 'https://github.com/billyndroid/landing-page-3'
+    },
+    'new-potential': {
+        title: 'New Potential - Digital Marketing',
+        image: 'https://picsum.photos/600/400?random=7',
+        description: 'A modern digital marketing agency website featuring team profiles, service offerings, and company vision. Designed to attract businesses looking for online marketing solutions with professional animations and layouts.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Animations', 'Modern UI'],
+        features: [
+            'Professional team member profiles',
+            'Service offerings and capabilities',
+            'Company mission and vision presentation',
+            'Modern animations and interactions',
+            'Business-focused design approach',
+            'Lead generation contact forms',
+            'Responsive design for business clients'
+        ],
+        liveLink: 'https://billyndroid.github.io/landing-page-2/',
+        githubLink: 'https://github.com/billyndroid/landing-page-2'
+    },
+    'business-landers': {
+        title: 'Business Landing Pages Collection',
+        image: 'https://picsum.photos/600/400?random=8',
+        description: 'A collection of modern, responsive business landing pages showcasing various design approaches and layouts. Features professional business templates suitable for different industries and business types.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Responsive Design'],
+        features: [
+            'Multiple business template designs',
+            'Cross-browser compatibility',
+            'Mobile-first responsive approach',
+            'Professional business branding',
+            'Optimized performance and loading',
+            'SEO-friendly structure',
+            'Easy customization and deployment'
+        ],
+        liveLink: 'https://billyndroid.github.io/lander/',
+        githubLink: 'https://github.com/billyndroid/lander'
+    },
+    'dashboard': {
+        title: 'Financial Trading Dashboard',
+        image: 'https://picsum.photos/600/400?random=9',
+        description: 'A comprehensive financial trading dashboard with real-time data visualization, market indices, and portfolio management. Features interactive charts, market updates, and trading analytics for financial professionals.',
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Chart.js', 'Data Visualization'],
+        features: [
+            'Real-time market data display',
+            'Interactive financial charts and graphs',
+            'Portfolio position tracking',
+            'Market indices and commodities data',
+            'Professional trading interface',
+            'Responsive design for mobile trading',
+            'Data visualization and analytics'
+        ],
+        liveLink: 'https://billyndroid.github.io/dashboard-example/',
+        githubLink: 'https://github.com/billyndroid/dashboard-example'
     }
 };
 
