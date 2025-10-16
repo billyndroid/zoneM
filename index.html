@@ -6,15 +6,44 @@
     <title>SGDev - Web Developer Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Accessible visually hidden helper */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        /* Make skip link visible on focus */
+        .skip-link:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 8px;
+            padding: 8px 12px;
+            background: #000;
+            color: #fff;
+            z-index: 1000;
+            clip: auto;
+            white-space: normal;
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="logo.svg" alt="SGDev" class="logo">
+                <img src="logo.svg" alt="SGDev logo" class="logo">
                 <span class="logo-text">SGDev</span>
             </div>
             <ul class="nav-menu">
@@ -26,19 +55,21 @@
                 <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <main id="main-content" tabindex="-1">
+    <section id="home" class="hero" aria-labelledby="home-heading">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">SGDev</h1>
+                <h1 id="home-heading" class="hero-title">SGDev</h1>
                 <h2 class="hero-subtitle">Full-Stack Web Developer</h2>
                 <p class="hero-description">
                     Creating modern, responsive, and user-friendly web applications with cutting-edge technologies.
@@ -49,22 +80,22 @@
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
                 <div class="hero-social">
-                    <a href="https://github.com/yourusername" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </a>
-                    <a href="https://app.pluralsight.com/profile/SteveSmith" class="social-link" target="_blank">
-                        <i class="fas fa-graduation-cap"></i>
+                    <a href="https://app.pluralsight.com/profile/SteveSmith" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Pluralsight profile (opens in new tab)">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     </a>
-                    <a href="mailto:Steve@example.com" class="social-link" target="_blank">
-                        <i class="fas fa-envelope"></i>
+                    <a href="mailto:Steve@example.com" class="social-link" aria-label="Email Steve@example.com">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=750&h=600&fit=crop&auto=format&q=80" alt="Web Development" class="profile-image">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=750&h=600&fit=crop&auto=format&q=80" alt="Illustration of web development with laptop and code" class="profile-image">
             </div>
         </div>
     </section>
@@ -206,7 +237,7 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="services/service-1.jpg" alt="Web Development" class="service-image">
+                    <img src="services/service-1.jpg" alt="Service: Web Development" class="service-image">
                     <div class="service-content">
                         <i class="fas fa-laptop-code service-icon"></i>
                         <h3>Web Development</h3>
@@ -220,7 +251,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="services/service-2.jpg" alt="Frontend Development" class="service-image">
+                    <img src="services/service-2.jpg" alt="Service: Frontend Development" class="service-image">
                     <div class="service-content">
                         <i class="fas fa-paint-brush service-icon"></i>
                         <h3>Frontend Development</h3>
@@ -234,7 +265,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="services/service-3.jpg" alt="Backend Development" class="service-image">
+                    <img src="services/service-3.jpg" alt="Service: Backend Development" class="service-image">
                     <div class="service-content">
                         <i class="fas fa-database service-icon"></i>
                         <h3>Backend Development</h3>
